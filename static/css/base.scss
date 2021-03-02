@@ -15,6 +15,22 @@ a {
     color: #fff;
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+  }
+
+::-webkit-scrollbar-track {
+    background: #121117; 
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #222222; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #222222; 
+}
+
 .main-container {
     width: 100%;
     height: 100vh;
@@ -29,36 +45,58 @@ a {
         width: 100%;
         height: 70px;
         background: #00000060;
+        font-size: 14px;
 
         .header-left {
             display: flex;
             align-items: center;
             a {
                 .logo {
-                    width: 250px;
-                    // display: block;
+                    width: 230px;
+                    display: block;
                 }
             }
         }
 
         .header-mid {
+            height: 100%;
+
             ul {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 list-style: none;
                 height: 100%;
-
+                text-transform: uppercase;
+                
                 li {
-                    margin: 0 20px;
                     height: 100%;
-
+                    
                     a {
+                        display: flex;
+                        align-items: center;
                         height: 100%;
+                        padding: 0 20px;
+                    }
+
+                    .active {
+                        color: #FFC605;
+                        position: relative;
+                    }
+
+                    .active::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: #FFC605;
                     }
 
                     &:hover > a {
                         color: #FFC605;
+                        background: rgba(255, 255, 255, 0.103);
                     }
                 }
             }
