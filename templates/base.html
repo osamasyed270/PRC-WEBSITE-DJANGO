@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRC - Home</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- CUSTOM CSS FOR BASE.HTML -->
+    <link rel="stylesheet" href="/static/css/base.css">
+
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="header-left">
+                <a href="/">
+                    <img class="logo" src="/static/img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="header-mid">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">How to Register</a></li>
+                    <li><a href="#">Game Rules</a></li>
+                </ul>
+            </div>
+            <div class="header-right">
+                <a class="register-btn" href="#">Register Now</a>
+            </div>
+        </header>
+
+        {% block page_details %}
+        {% endblock page_details %}
+        
+    </div>
+
+</body>
+</html>

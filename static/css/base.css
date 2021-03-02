@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.main-container .header {
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 30px;
+  width: 100%;
+  height: 70px;
+  background: #00000060;
+}
+
+.main-container .header .header-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .header .header-left a .logo {
+  width: 250px;
+}
+
+.main-container .header .header-mid ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  height: 100%;
+}
+
+.main-container .header .header-mid ul li {
+  margin: 0 20px;
+  height: 100%;
+}
+
+.main-container .header .header-mid ul li a {
+  height: 100%;
+}
+
+.main-container .header .header-mid ul li:hover > a {
+  color: #FFC605;
+}
+
+.main-container .header .header-right .register-btn {
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 5px 15px;
+  -webkit-transition: background-color .3s, border .3s, color .3s;
+  transition: background-color .3s, border .3s, color .3s;
+}
+
+.main-container .header .header-right .register-btn:hover {
+  background-color: #FFC605;
+  border: 2px solid #FFC605;
+  color: #000;
+}
+/*# sourceMappingURL=base.css.map */
