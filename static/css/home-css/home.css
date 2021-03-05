@@ -1,6 +1,5 @@
 .main-container .section {
   width: 100%;
-  height: 100%;
   position: relative;
 }
 
@@ -13,6 +12,37 @@
 
 .main-container .section1 .section1-details {
   position: absolute;
-  top: 50%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main-container .section1 .section1-details .details {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.main-container .section1 .section1-details .details .register-now-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 2rem;
+  border: .2rem solid #ffffff;
+  border-radius: 2rem;
+  padding: .5rem 1.5rem;
+  -webkit-transition: background-color .3s, border .3s, color .3s;
+  transition: background-color .3s, border .3s, color .3s;
+}
+
+.main-container .section1 .section1-details .details .register-now-btn:hover {
+  border: .2rem solid #FFC605;
+  background: #FFC605;
+  color: #000;
 }
 /*# sourceMappingURL=home.css.map */

@@ -12,7 +12,17 @@
     <div class="section section1">
         <img src="/static/img/pubg-cover.jpg" alt="">
         <div class="section1-details">
-            <h1>Prize Money</h1>
+            <div class="details">
+                <a class="register-now-btn" href="register-now">Register Now</a>
+            </div>
         </div>
     </div>
+
+    <script>
+        var section1 = document.querySelector('.section1');
+
+        document.addEventListener('DOMContentLoaded', function() {
+            section1.style.height = window.innerHeight + 'px';
+        })
+    </script>
 {% endblock page_details %}
