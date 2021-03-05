@@ -150,16 +150,4 @@ a {
     font-size: 56.9%;
   }
 }
-
-@media (max-width: 1100px) {
-  html {
-    font-size: 50%;
-  }
-}
-
-@media (max-width: 900px) {
-  html {
-    font-size: 41.7%;
-  }
-}
 /*# sourceMappingURL=base.css.map */
