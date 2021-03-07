@@ -1,0 +1,156 @@
+.main-container {
+
+    .register-main-container {
+        margin: 100px auto;
+        width: 70rem;
+        border: 1px solid #3d3d3d;
+        color: #e6e6e6;
+        border-radius: 15px;
+        overflow: hidden;
+        
+        .register-container {
+            width: 100%;
+            padding: 0 10px;
+            
+            .register-top-container {
+                width: 100%;
+                height: 100px;
+                padding: 0 20px;
+                border-bottom: 1px solid #3d3d3d;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .register-title {
+                    font-size: 3rem;
+                }
+
+                .match-date {
+                    font-size: 20px
+                }
+            }
+    
+            .register-content-container {
+                width: 100%;
+    
+                .register-form {
+                    width: 100%;
+                    padding: 20px 20px;
+    
+                    input ,select {
+                        width: 100%;
+                        height: 40px;
+                        border-radius: 5px;
+                        outline: none;
+                        border: 1px solid #3d3d3d;
+                        background: #222222;
+                        color: #d4d4d4;
+                        padding: 0 15px;
+                        margin-top: 7px;
+                        transition: border .2s;
+
+                        &:focus {
+                            border: 1px solid #FFC605;
+                        }
+                    }
+    
+                    label {
+                        font-size: 1.6rem;
+                        margin-left: 2px;
+                    }
+    
+                    .input-div {
+                        width: 100%;
+                        margin-top: 25px;
+                    }
+    
+                    .double-input-div {
+                        display: flex;
+    
+                        .fname-div {
+                            margin-right: 20px;
+                        }
+                        .age-div {
+                            margin-right: 20px;
+                        }
+                    }
+
+                    .image-container {
+                        .image-div {
+                            position: relative;
+                            width: 150px;
+                            height: 150px;
+                            border: 1px solid #3d3d3d;
+                            // border-radius: 50%;
+                            overflow: hidden;
+
+                            .content {
+                                width: 100%;
+                                height: 100%;
+                            }
+
+                            .user-image {
+                                position: absolute;
+                                top: 0;
+                                // left: 50%;
+                                // transform: translateX(-50%);
+                                width: 100%;
+                                height: 100%;
+                                // object-fit: contain;
+                                // object-position: center;
+                                display: none;
+                            }
+
+                            .upload-btn-div {
+                                position: absolute;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: #000000c0;
+                                display: none;
+
+                                .upload-img-btn {
+                                    font-size: 14px;
+                                    border: 1px solid #FFC605;
+                                    color: #FFC605;
+                                    width: fit-content;
+                                    padding: 5px 10px;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                }
+
+                                .after-upload-img {
+                                    display: none;
+                                }
+                            }
+
+                            &:hover > .upload-btn-div {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                    }
+    
+                    .submit-btn {
+                        margin-top: 20px;
+                        display: flex;
+                        justify-content: flex-end;
+    
+                        input {
+                            width: 100px;
+                            cursor: pointer;
+                            transition: background-color .3s, border .3s, color .3s;
+    
+                            &:hover {
+                                border-color: #fff;
+                                background: #fff;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

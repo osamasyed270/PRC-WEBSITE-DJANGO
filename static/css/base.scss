@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background: #000;
+    background: #222222;
     color: #fff;
     font-family: 'Roboto', Arial, sans-serif;
 }
@@ -28,11 +28,22 @@ a {
 }
  
 ::-webkit-scrollbar-thumb {
-    background: #222222; 
+    background: #414141; 
 }
   
 ::-webkit-scrollbar-thumb:hover {
-    background: #222222; 
+    background: #414141; 
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .main-container {
@@ -124,7 +135,6 @@ a {
         }
     }
 
-    
 }
 
 @media (max-width: 1200px) {
