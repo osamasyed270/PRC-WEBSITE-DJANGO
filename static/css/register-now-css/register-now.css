@@ -1,6 +1,7 @@
 .main-container .register-main-container {
   margin: 100px auto;
-  width: 70rem;
+  width: 100%;
+  max-width: 60rem;
   border: 1px solid #3d3d3d;
   color: #e6e6e6;
   border-radius: 15px;
@@ -52,7 +53,7 @@
   outline: none;
   border: 1px solid #3d3d3d;
   background: #222222;
-  color: #d4d4d4;
+  color: #757575;
   padding: 0 15px;
   margin-top: 7px;
   -webkit-transition: border .2s;
@@ -61,6 +62,10 @@
 
 .main-container .register-main-container .register-container .register-content-container .register-form input:focus, .main-container .register-main-container .register-container .register-content-container .register-form select:focus {
   border: 1px solid #FFC605;
+}
+
+.main-container .register-main-container .register-container .register-content-container .register-form select {
+  cursor: pointer;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form label {
@@ -79,15 +84,23 @@
   display: flex;
 }
 
-.main-container .register-main-container .register-container .register-content-container .register-form .double-input-div .fname-div {
-  margin-right: 20px;
-}
-
 .main-container .register-main-container .register-container .register-content-container .register-form .double-input-div .age-div {
   margin-right: 20px;
 }
 
-.main-container .register-main-container .register-container .register-content-container .register-form .image-container .image-div {
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top {
+  width: 100%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container {
+  margin-right: 30px;
+}
+
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div {
   position: relative;
   width: 150px;
   height: 150px;
@@ -95,12 +108,36 @@
   overflow: hidden;
 }
 
-.main-container .register-main-container .register-container .register-content-container .register-form .image-container .image-div .content {
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .content {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.main-container .register-main-container .register-container .register-content-container .register-form .image-container .image-div .user-image {
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .content .user-icon {
+  width: 70px;
+}
+
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .content p {
+  color: #757575;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .user-image {
   position: absolute;
   top: 0;
   width: 100%;
@@ -108,7 +145,7 @@
   display: none;
 }
 
-.main-container .register-main-container .register-container .register-content-container .register-form .image-container .image-div .upload-btn-div {
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .upload-btn-div {
   position: absolute;
   top: 0;
   width: 100%;
@@ -117,7 +154,7 @@
   display: none;
 }
 
-.main-container .register-main-container .register-container .register-content-container .register-form .image-container .image-div .upload-btn-div .upload-img-btn {
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .upload-btn-div .upload-img-btn {
   font-size: 14px;
   border: 1px solid #FFC605;
   color: #FFC605;
@@ -129,11 +166,11 @@
   cursor: pointer;
 }
 
-.main-container .register-main-container .register-container .register-content-container .register-form .image-container .image-div .upload-btn-div .after-upload-img {
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .upload-btn-div .after-upload-img {
   display: none;
 }
 
-.main-container .register-main-container .register-container .register-content-container .register-form .image-container .image-div:hover > .upload-btn-div {
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div:hover > .upload-btn-div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,6 +180,27 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top .form-top-inputs-div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+}
+
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top .form-top-inputs-div .input-div {
+  margin: 0;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .submit-btn {

@@ -16,24 +16,39 @@
                 <div class="match-date">Match Date : 20 March,2021</div>
             </div>
             <div class="register-content-container">
-                <form action="" class="register-form">
-                    <div class="image-container">
-                        <div class="image-div">
-                            <div class="content">
+                <form action="/register-now" method="POST" class="register-form" enctype="multipart/form-data">
+                    {% csrf_token %}
 
-                            </div>
-                            <img class="user-image" src="" alt="">
-                            <input class="deault-btn" type="file" hidden required>
-                            <div class="upload-btn-div">
-                                <p class="upload-img-btn">Upload Image</p>
-                                <div class="after-upload-img">
-                                    <p class="change-img-btn">Change</p>
-                                    <p class="remove-img-btn">Remove</p>
+                    <div class="form-top">
+                        <div class="image-container">
+                            <div class="image-div">
+                                <div class="content">
+                                    <img class="user-icon" src="/static/img/user-icon.svg" alt="">
+                                    <p>Please upload your photo</p>
+                                </div>
+                                <img class="user-image" src="" alt="">
+                                <input class="default-btn" type="file" name="register-image" hidden required>
+                                <div class="upload-btn-div">
+                                    <p class="upload-img-btn" onclick="clicked()">Upload Image</p>
+                                    <div class="after-upload-img">
+                                        <p class="change-img-btn">Change</p>
+                                        <p class="remove-img-btn">Remove</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="form-top-inputs-div">
+                            <div class="fullname-div input-div">
+                                <label class="input-label" for="full_name">Full Name</label>
+                                <input type="text" name="register-fullname" id="full_name" placeholder="Full Name" required>
+                            </div>
+                            <div class="email-div input-div">
+                                <label class="input-label" for="email">Email</label>
+                                <input type="email" name="register-email" id="email" placeholder="example@gmail.com" required>
+                            </div>                        
+                        </div>
                     </div>
-                    <div class="double-input-div full-name-div">
+                    {% comment %} <div class="double-input-div full-name-div">
                         <div class="fname-div input-div">
                             <label class="input-label" for="full-name">First Name</label>
                             <input type="text" name="fname" id="fname" placeholder="First Name" required>
@@ -42,39 +57,39 @@
                             <label class="input-label" for="lname">Last Name</label>
                             <input type="text" name="lname" id="lname" placeholder="Last Name" required>
                         </div>
-                    </div>
-                    <div class="email-div input-div">
+                    </div> {% endcomment %}
+                    {% comment %} <div class="email-div input-div">
                         <label class="input-label" for="email">Email</label>
                         <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
-                    </div>
+                    </div> {% endcomment %}
                     <div class="mobile-no-div input-div">
-                        <label class="input-label" for="mobile-no">Mobile No.</label>
-                        <input type="number" name="mobile-no" id="mobile-no" placeholder="Mobile Number" required>
+                        <label class="input-label" for="mobile_no">Mobile No.</label>
+                        <input type="number" name="register-mobileno" id="mobile_no" placeholder="Mobile Number" required>
                     </div>
                     <div class="game-username-div input-div">
-                        <label class="input-label" for="game-username">Game Username</label>
-                        <input type="text" name="game-username" id="game-username" placeholder="Game Id Name" required>
+                        <label class="input-label" for="name_in_game">Game Username</label>
+                        <input type="text" name="register-gameusername" id="name_in_game" placeholder="Game Id Name" required>
                     </div>
                     <div class="game-id-div input-div">
-                        <label class="input-label" for="game-id">Game Id</label>
-                        <input type="number" name="game-id" id="game-id" placeholder="Game Id Number" required>
+                        <label class="input-label" for="game_id">Game Id</label>
+                        <input type="number" name="register-gameid" id="game_id" placeholder="Game Id Number" required>
                     </div>
                     <div class="double-input-div">
                         <div class="age-div input-div">
                             <label class="input-label" for="age">Age</label>
-                            <input type="number" name="age" id="age" placeholder="Your Age in Years" required>
+                            <input type="number" name="register-age" id="age" placeholder="Your Age in Years" required>
                         </div>
                         <div class="gender-div input-div">
                             <label class="input-label" for="gender">Gender</label>
-                            <select name="gender" id="gender">
+                            <select name="register-gender" id="gender">
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
                         </div>
                     </div>
                     <div class="facebook-id-div input-div">
-                        <label class="input-label" for="facebook-id">Facebook Id Name</label>
-                        <input type="text" name="facebook-id" id="facebook-id" placeholder="Facebook Id Name" required>
+                        <label class="input-label" for="facebook_name">Facebook Id Name</label>
+                        <input type="text" name="register-facebook" id="facebook_name" placeholder="Facebook Id Name" required>
                     </div>
 
                     <div class="submit-btn">
@@ -85,4 +100,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+        var defaultBtn = document.querySelector('.default-btn');
+        function clicked() {
+            defaultBtn.click();
+        }
+    </script>
 {% endblock page_details %}
