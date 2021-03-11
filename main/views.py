@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
+from django.http import HttpResponseRedirect
 from main.models import Match_1_Register
 from django.core.files.storage import FileSystemStorage
 
@@ -15,6 +16,10 @@ def gameRules(request):
 def contactUs(request):
     return render(request, 'main/contact-us.html')
 
+def allRegistersDetails(request):
+    all_registers = Match_1_Register.objects.all()
+    return render(request, 'main/all-registers-details.html', {'registers': all_registers})
+
 def registerNow(request):
     if request.method == 'POST' and request.FILES['register-image']:
         myfile = request.FILES['register-image']
@@ -29,11 +34,13 @@ def registerNow(request):
             name_in_game = request.POST['register-gameusername'],
             game_id = request.POST['register-gameid'],
             age = request.POST['register-age'],
+            gender = request.POST['register-gender'],
             facebook_name = request.POST['register-facebook']
         )
         new_register.save()
-        return render(request, 'main/register-now.html')
+        return HttpResponseRedirect(request.path)
+        # return render(request, 'main/register-now.html')
     else:
         pass    
     
-    return render(request, 'main/register-now.html')
+        return render(request, 'main/register-now.html')

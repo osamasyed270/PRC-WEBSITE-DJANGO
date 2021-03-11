@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registers Count : {{ registers.count }}</h1>
+    {% for u in registers %}
+        <p><b>SNo. : </b>{{ u.sno }}</p>
+        <img src="{{ u.image }}" alt="" width="200px">
+        <p><b>Full Name : </b>{{ u.full_name }}</p>
+        <p><b>Email : </b>{{ u.email }}</p>
+        <p><b>Mobile No. : </b>{{ u.mobile_no }}</p>
+        <p><b>Username in Game : </b>{{ u.name_in_game }}</p>
+        <p><b>Game Id : </b>{{ u.game_id }}</p>
+        <p><b>Age : </b>{{ u.age }}</p>
+        <p><b>Gender : </b>{{ u.gender }}</p>
+        <p><b>Facebook Id : </b>{{ u.facebook_name }}</p>
+        <p><b>Registration Time : </b>{{ u.timestamp }}</p>
+        <hr>
+        <br>
+    {% endfor %}
+</body>
+</html>
