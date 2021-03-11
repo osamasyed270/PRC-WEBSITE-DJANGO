@@ -5,9 +5,9 @@ from django.utils.timezone import now
 
 class Match_1_Register(models.Model):
     sno = models.AutoField(primary_key=True)
-    image = models.ImageField(null=True, blank=True,)
+    image = models.URLField()
     full_name = models.CharField(max_length=100)
-    email = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
     mobile_no = models.CharField(max_length=11)
     name_in_game = models.CharField(max_length=100)
     game_id = models.CharField(max_length=20)

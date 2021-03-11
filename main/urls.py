@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from main.views import home, howToRegister, gameRules, contactUs, registerNow
+from .views import home, howToRegister, gameRules, contactUs, registerNow
 
 urlpatterns = [
     path('', home, name='home'),
