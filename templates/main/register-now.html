@@ -19,6 +19,8 @@
                 <form action="/register-now" method="POST" class="register-form" enctype="multipart/form-data">
                     {% csrf_token %}
 
+                    <!-- {{form}} -->
+
                     <div class="form-top">
                         <div class="image-container">
                             <div class="image-div">
@@ -27,7 +29,8 @@
                                     <p>Please upload your photo</p>
                                 </div>
                                 <img class="user-image" src="" alt="">
-                                <input class="default-btn" type="file" name="register-image" hidden required>
+                                {{form.image}}
+                                <!-- <input class="default-btn" type="file" name="register-image" hidden required> -->
                                 <div class="upload-btn-div">
                                     <p class="upload-img-btn" onclick="clicked()">Upload Image</p>
                                     <div class="after-upload-img">
@@ -40,42 +43,50 @@
                         <div class="form-top-inputs-div">
                             <div class="fullname-div input-div">
                                 <label class="input-label" for="full_name">Full Name</label>
-                                <input type="text" name="register-fullname" id="full_name" placeholder="Full Name" required>
+                                {{form.full_name}}
+                                <!-- <input type="text" name="register-fullname" id="full_name" placeholder="Full Name" required> -->
                             </div>
                             <div class="email-div input-div">
                                 <label class="input-label" for="email">Email</label>
-                                <input type="email" name="register-email" id="email" placeholder="example@gmail.com" required>
+                                {{form.email}}
+                                <!-- <input type="email" name="register-email" id="email" placeholder="example@gmail.com" required> -->
                             </div>                        
                         </div>
                     </div>
                     <div class="mobile-no-div input-div">
                         <label class="input-label" for="mobile_no">Mobile No.</label>
-                        <input type="number" name="register-mobileno" id="mobile_no" placeholder="Mobile Number" required>
+                        {{form.mobile_no}}
+                        <!-- <input type="number" name="register-mobileno" id="mobile_no" placeholder="Mobile Number" required> -->
                     </div>
                     <div class="game-username-div input-div">
                         <label class="input-label" for="name_in_game">Game Username</label>
-                        <input type="text" name="register-gameusername" id="name_in_game" placeholder="Game Id Name" required>
+                        {{form.name_in_game}}
+                        <!-- <input type="text" name="register-gameusername" id="name_in_game" placeholder="Game Id Name" required> -->
                     </div>
                     <div class="game-id-div input-div">
                         <label class="input-label" for="game_id">Game Id</label>
-                        <input type="number" name="register-gameid" id="game_id" placeholder="Game Id Number" required>
+                        {{form.game_id}}
+                        <!-- <input type="number" name="register-gameid" id="game_id" placeholder="Game Id Number" required> -->
                     </div>
                     <div class="double-input-div">
                         <div class="age-div input-div">
                             <label class="input-label" for="age">Age</label>
-                            <input type="number" name="register-age" id="age" placeholder="Your Age in Years" required>
+                            {{form.age}}
+                            <!-- <input type="number" name="register-age" id="age" placeholder="Your Age in Years" required> -->
                         </div>
                         <div class="gender-div input-div">
                             <label class="input-label" for="gender">Gender</label>
-                            <select name="register-gender" id="gender">
+                            {{form.gender}}
+                            <!-- <select name="register-gender" id="gender">
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
-                            </select>
+                            </select> -->
                         </div>
                     </div>
                     <div class="facebook-id-div input-div">
                         <label class="input-label" for="facebook_name">Facebook Id Name</label>
-                        <input type="text" name="register-facebook" id="facebook_name" placeholder="Facebook Id Name" required>
+                        {{form.facebook_name}}
+                        <!-- <input type="text" name="register-facebook" id="facebook_name" placeholder="Facebook Id Name" required> -->
                     </div>
 
                     <div class="submit-btn">
