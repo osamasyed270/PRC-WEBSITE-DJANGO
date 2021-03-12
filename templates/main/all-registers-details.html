@@ -10,7 +10,7 @@
     <h1>Registers Count : {{ registers.count }}</h1>
     {% for u in registers %}
         <p><b>SNo. : </b>{{ u.sno }}</p>
-        <img src="images/{{ u.image }}" alt="" width="200px">
+        <img src="{{ u.image }}" alt="" width="200px">
         <p><b>Full Name : </b>{{ u.full_name }}</p>
         <p><b>Email : </b>{{ u.email }}</p>
         <p><b>Mobile No. : </b>{{ u.mobile_no }}</p>
