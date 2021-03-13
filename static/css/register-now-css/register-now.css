@@ -169,6 +169,10 @@
   padding: .5rem 1rem;
   border-radius: .5rem;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .upload-btn-div .after-upload-img {
@@ -243,6 +247,9 @@
   html {
     font-size: 62.5%;
   }
+  .main-container .register-main-container .register-container {
+    padding: 0 2rem;
+  }
   .main-container .register-main-container .register-container .register-top-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -254,6 +261,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 0rem;
   }
   .main-container .register-main-container .register-container .register-top-container .register-title {
     margin-bottom: .5rem;

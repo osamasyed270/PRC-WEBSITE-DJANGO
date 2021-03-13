@@ -145,6 +145,7 @@
                                         padding: .5rem 1rem;
                                         border-radius: .5rem;
                                         cursor: pointer;
+                                        user-select: none;
                                     }
     
                                     .after-upload-img {
@@ -216,10 +217,13 @@
     .main-container {
         .register-main-container {
             .register-container {
+                padding: 0 2rem;
+
                 .register-top-container {
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: center;
+                    padding: 0rem;
 
                     .register-title {
                         margin-bottom: .5rem;
