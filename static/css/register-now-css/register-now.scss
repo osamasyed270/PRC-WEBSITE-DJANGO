@@ -228,6 +228,8 @@
 
                 .register-content-container {
                     .register-form {
+                        padding: 2rem 0;
+
                         .form-top {
                             flex-direction: column;
                             align-items: center;
@@ -242,15 +244,11 @@
 
                                     .content {
                                         justify-content: flex-start;
-                                        margin-top: 2rem;
+                                        margin-top: 1rem;
 
                                         .user-icon {
                                             width: 10rem;
                                         }
-                                    }
-
-                                    .user-image {
-
                                     }
 
                                     .upload-btn-div {
@@ -261,6 +259,7 @@
 
                                         .upload-img-btn {
                                             width: 100%;
+                                            padding: 1rem;
                                             border-radius: 0rem;
                                             text-align: center;
                                             background: #FFC605;

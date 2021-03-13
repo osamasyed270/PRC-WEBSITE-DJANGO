@@ -258,6 +258,9 @@
   .main-container .register-main-container .register-container .register-top-container .register-title {
     margin-bottom: .5rem;
   }
+  .main-container .register-main-container .register-container .register-content-container .register-form {
+    padding: 2rem 0;
+  }
   .main-container .register-main-container .register-container .register-content-container .register-form .form-top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -279,7 +282,7 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .content .user-icon {
     width: 10rem;
@@ -298,6 +301,7 @@
   }
   .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .upload-btn-div .upload-img-btn {
     width: 100%;
+    padding: 1rem;
     border-radius: 0rem;
     text-align: center;
     background: #FFC605;
