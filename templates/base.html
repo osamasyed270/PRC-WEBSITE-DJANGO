@@ -38,11 +38,18 @@
                 <a class="register-btn" href="register-now">Register Now</a>
             </div>
         </header>
-
+        
         {% block page_details %}
         {% endblock page_details %}
         
     </div>
+
+    <script>
+        var alert = document.querySelector('.alert');
+        function closeAlert() {
+            alert.remove();
+        }
+    </script>
 
 </body>
 </html>

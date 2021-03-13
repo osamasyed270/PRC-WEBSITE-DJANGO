@@ -8,6 +8,13 @@
 
 {% block page_details %}
     <div class="register-main-container">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                <p class="alert-message">{{ message|safe }}</p>
+                <button type="button" class="close-btn"><i class="fas fa-times" onclick="closeAlert()"></i></button>
+            </div>
+        {% endfor %}
+
         <div class="register-container">
             <div class="register-top-container">
                 <div class="register-title">
@@ -19,7 +26,6 @@
                 <form action="/register-now" method="POST" class="register-form" enctype="multipart/form-data">
                     {% csrf_token %}
 
-                    <!-- {{form}} -->
 
                     <div class="form-top">
                         <div class="image-container">
@@ -28,7 +34,7 @@
                                     <img class="user-icon" src="/static/img/user-icon.svg" alt="">
                                     <p>Please upload your photo</p>
                                 </div>
-                                <img class="user-image" src="" alt="">
+                                <img class="user-image" id="user-image-preview" src="" alt="">
                                 {{form.image}}
                                 <!-- <input class="default-btn" type="file" name="register-image" hidden required> -->
                                 <div class="upload-btn-div">
@@ -38,6 +44,9 @@
                                         <p class="remove-img-btn">Remove</p>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="image-restrict-div">
+                                <p>Selected file is not a valid image. Only JPEG, JPG and PNG files are allowed.</p>
                             </div>
                         </div>
                         <div class="form-top-inputs-div">
@@ -102,6 +111,32 @@
         var defaultBtn = document.querySelector('.default-btn');
         function clicked() {
             defaultBtn.click();
+        }
+
+
+        var defaultBtn = document.querySelector('.default-btn');
+        var imageRestrictDiv = document.querySelector('.image-restrict-div');
+        defaultBtn.addEventListener("change", function(event) {
+            var files = defaultBtn.files;
+            for (var i = 0; i < files.length; i++) {
+                if ((files[i].type != 'image/png') && (files[i].type != 'image/jpeg') && (files[i].type != 'image/jpg')) {
+                    imageRestrictDiv.style.display = 'flex';
+                } else {
+                    imageRestrictDiv.style.display = 'none';
+                }
+            }
+        }, false);
+
+        function showPreview(event) {
+            if (event.target.files.length > 0) {
+                var src = URL.createObjectURL(event.target.files[0]);
+                var preview = document.getElementById('user-image-preview');
+                var imageContent = document.querySelector('.form-top .image-container .image-div .content');
+
+                preview.src = src;
+                preview.style.display = "block";
+                imageContent.style.display = 'none';
+            }
         }
     </script>
 {% endblock page_details %}

@@ -1,23 +1,23 @@
 .main-container .register-main-container {
-  margin: 100px auto;
+  margin: 10rem auto;
   width: 100%;
   max-width: 60rem;
-  border: 1px solid #3d3d3d;
+  border: .1rem solid #3d3d3d;
   color: #e6e6e6;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   overflow: hidden;
 }
 
 .main-container .register-main-container .register-container {
   width: 100%;
-  padding: 0 10px;
+  padding: 0 1rem;
 }
 
 .main-container .register-main-container .register-container .register-top-container {
   width: 100%;
-  height: 100px;
-  padding: 0 20px;
-  border-bottom: 1px solid #3d3d3d;
+  height: 10rem;
+  padding: 0 2rem;
+  border-bottom: .1rem solid #3d3d3d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,7 +34,7 @@
 }
 
 .main-container .register-main-container .register-container .register-top-container .match-date {
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 .main-container .register-main-container .register-container .register-content-container {
@@ -43,25 +43,29 @@
 
 .main-container .register-main-container .register-container .register-content-container .register-form {
   width: 100%;
-  padding: 20px 20px;
+  padding: 2rem 2rem;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form input, .main-container .register-main-container .register-container .register-content-container .register-form select {
   width: 100%;
-  height: 40px;
-  border-radius: 5px;
+  height: 4rem;
+  border-radius: .5rem;
   outline: none;
-  border: 1px solid #3d3d3d;
+  border: .1rem solid #3d3d3d;
   background: #222222;
   color: #757575;
-  padding: 0 15px;
-  margin-top: 7px;
+  padding: 0 1.5rem;
+  margin-top: .7rem;
   -webkit-transition: border .2s;
   transition: border .2s;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form input:focus, .main-container .register-main-container .register-container .register-content-container .register-form select:focus {
-  border: 1px solid #FFC605;
+  border: .1rem solid #FFC605;
+}
+
+.main-container .register-main-container .register-container .register-content-container .register-form input::-webkit-input-placeholder, .main-container .register-main-container .register-container .register-content-container .register-form select {
+  font-size: 1.333rem;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form select {
@@ -70,12 +74,12 @@
 
 .main-container .register-main-container .register-container .register-content-container .register-form label {
   font-size: 1.6rem;
-  margin-left: 2px;
+  margin-left: .2rem;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .input-div {
   width: 100%;
-  margin-top: 25px;
+  margin-top: 2.5rem;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .double-input-div {
@@ -85,26 +89,26 @@
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .double-input-div .age-div {
-  margin-right: 20px;
+  margin-right: 2rem;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .form-top {
   width: 100%;
-  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container {
-  margin-right: 30px;
+  margin-right: 3rem;
+  width: 15rem;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div {
   position: relative;
-  width: 150px;
-  height: 150px;
-  border: 1px solid #3d3d3d;
+  width: 15rem;
+  height: 15rem;
+  border: .1rem solid #3d3d3d;
   overflow: hidden;
 }
 
@@ -127,14 +131,14 @@
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .content .user-icon {
-  width: 70px;
+  width: 7rem;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .content p {
   color: #757575;
-  font-size: 14px;
+  font-size: 1.4rem;
   text-align: center;
-  margin-top: 5px;
+  margin-top: .5rem;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .user-image {
@@ -142,6 +146,7 @@
   top: 0;
   width: 100%;
   height: 100%;
+  display: none;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .upload-btn-div {
@@ -154,14 +159,14 @@
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .upload-btn-div .upload-img-btn {
-  font-size: 14px;
-  border: 1px solid #FFC605;
+  font-size: 1.4rem;
+  border: .1rem solid #FFC605;
   color: #FFC605;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
   cursor: pointer;
 }
 
@@ -190,9 +195,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: space-between;
       -ms-flex-align: space-between;
           align-items: space-between;
@@ -202,8 +204,12 @@
   margin: 0;
 }
 
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top .form-top-inputs-div .input-div:nth-child(2) {
+  margin-top: 1.8rem;
+}
+
 .main-container .register-main-container .register-container .register-content-container .register-form .submit-btn {
-  margin-top: 20px;
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,7 +219,7 @@
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .submit-btn input {
-  width: 100px;
+  width: 10rem;
   cursor: pointer;
   -webkit-transition: background-color .3s, border .3s, color .3s;
   transition: background-color .3s, border .3s, color .3s;
@@ -223,5 +229,12 @@
   border-color: #fff;
   background: #fff;
   color: #000;
+}
+
+.image-restrict-div {
+  display: none;
+  color: #F32013;
+  text-align: center;
+  font-size: 1.4rem;
 }
 /*# sourceMappingURL=register-now.css.map */

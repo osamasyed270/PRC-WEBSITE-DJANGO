@@ -137,6 +137,80 @@ input[type=number] {
 
 }
 
+.alert {
+    position: absolute;
+    width: 90%;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.6rem;
+    border-radius: .5rem;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem;
+
+    .alert-message {
+        padding-right: 4rem;
+    }
+
+    .close-btn {
+        border: none;
+        background: none;
+        
+        .fa-times {
+            font-size: 2rem;
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+                color: #353B36;
+            }
+        }
+    }
+}
+
+.alert-success {
+    color: #0F5132;
+    border: .1rem solid #BADBCC;
+    background: #D4EDDA;
+    .close-btn {
+        .fa-times {
+            color: #6A766D;
+        }
+    }
+}
+.alert-danger {
+    color: #721C24;
+    border: .1rem solid #F5C6CB;
+    background: #F8D7DA;
+    .close-btn {
+        .fa-times {
+            color: #7C6B6D;
+        }
+    }
+}
+.alert-warning {
+    color: #93751B;
+    border: .1rem solid #faeab8;
+    background: #FFF3CD;
+    .close-btn {
+        .fa-times {
+            color: #7F7966;
+        }
+    }
+}
+.alert-secondary {
+    color: #383D41;
+    border: .1rem solid #D6D8DB;
+    background: #E2E3E5;
+    .close-btn {
+        .fa-times {
+            color: #717172;
+        }
+    }
+}
+
 @media (max-width: 1200px) {
     html {
         font-size: 56.9%;

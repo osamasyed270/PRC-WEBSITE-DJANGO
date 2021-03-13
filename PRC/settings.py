@@ -16,6 +16,10 @@ import django_heroku
 import dj_database_url
 from decouple import config
 
+import cloudinary_storage
+
+from django.contrib.messages import constants as messages
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -42,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +141,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'static/images')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedMainifestStaticFilesStorage'
 
 django_heroku.settings(locals())
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'prcpk',
+    'API_KEY': '187279455279673',
+    'API_SECRET': 'lfhIhfoNeU1BIg7bGJcoobgq8iU'
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}

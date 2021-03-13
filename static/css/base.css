@@ -155,6 +155,84 @@ input[type=number] {
   color: #000;
 }
 
+.alert {
+  position: absolute;
+  width: 90%;
+  top: 2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 1.6rem;
+  border-radius: .5rem;
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.6rem;
+}
+
+.alert .alert-message {
+  padding-right: 4rem;
+}
+
+.alert .close-btn {
+  border: none;
+  background: none;
+}
+
+.alert .close-btn .fa-times {
+  font-size: 2rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.alert .close-btn .fa-times:hover {
+  color: #353B36;
+}
+
+.alert-success {
+  color: #0F5132;
+  border: .1rem solid #BADBCC;
+  background: #D4EDDA;
+}
+
+.alert-success .close-btn .fa-times {
+  color: #6A766D;
+}
+
+.alert-danger {
+  color: #721C24;
+  border: .1rem solid #F5C6CB;
+  background: #F8D7DA;
+}
+
+.alert-danger .close-btn .fa-times {
+  color: #7C6B6D;
+}
+
+.alert-warning {
+  color: #93751B;
+  border: .1rem solid #faeab8;
+  background: #FFF3CD;
+}
+
+.alert-warning .close-btn .fa-times {
+  color: #7F7966;
+}
+
+.alert-secondary {
+  color: #383D41;
+  border: .1rem solid #D6D8DB;
+  background: #E2E3E5;
+}
+
+.alert-secondary .close-btn .fa-times {
+  color: #717172;
+}
+
 @media (max-width: 1200px) {
   html {
     font-size: 56.9%;

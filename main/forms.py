@@ -8,7 +8,7 @@ class RegistrationForm(ModelForm):
         fields = ('image', 'full_name', 'email', 'mobile_no', 'name_in_game', 'game_id', 'age', 'gender', 'facebook_name')
 
         widgets = {
-			'image': forms.FileInput(attrs={'class': 'default-btn', 'hidden': 'True'}),
+			'image': forms.FileInput(attrs={'class': 'default-btn', 'hidden': 'True', 'onchange': 'showPreview(event)'}),
 			'full_name': forms.TextInput(attrs={'id': 'full_name', 'placeholder': 'Full Name'}),
 			'email': forms.EmailInput(attrs={'id': 'email', 'placeholder': 'example@gmail.com'}),
 			'mobile_no': forms.NumberInput(attrs={'id': 'mobile_no', 'placeholder': 'Mobile Number'}),
