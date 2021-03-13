@@ -36,7 +36,7 @@
                                 </div>
                                 <img class="user-image" id="user-image-preview" src="" alt="">
                                 {{form.image}}
-                                <!-- <input class="default-btn" type="file" name="register-image" hidden required> -->
+                                <!-- <input class="default-btn" type="file" name="register-image" onchange="showPreview(event)" hidden> -->
                                 <div class="upload-btn-div">
                                     <p class="upload-img-btn" onclick="clicked()">Upload Image</p>
                                     <div class="after-upload-img">
@@ -53,35 +53,35 @@
                             <div class="fullname-div input-div">
                                 <label class="input-label" for="full_name">Full Name</label>
                                 {{form.full_name}}
-                                <!-- <input type="text" name="register-fullname" id="full_name" placeholder="Full Name" required> -->
+                                <!-- <input type="text" name="register-fullname" id="full_name" placeholder="Full Name" > -->
                             </div>
                             <div class="email-div input-div">
                                 <label class="input-label" for="email">Email</label>
                                 {{form.email}}
-                                <!-- <input type="email" name="register-email" id="email" placeholder="example@gmail.com" required> -->
+                                <!-- <input type="email" name="register-email" id="email" placeholder="example@gmail.com"> -->
                             </div>                        
                         </div>
                     </div>
                     <div class="mobile-no-div input-div">
                         <label class="input-label" for="mobile_no">Mobile No.</label>
                         {{form.mobile_no}}
-                        <!-- <input type="number" name="register-mobileno" id="mobile_no" placeholder="Mobile Number" required> -->
+                        <!-- <input type="number" name="register-mobileno" id="mobile_no" placeholder="Mobile Number"> -->
                     </div>
                     <div class="game-username-div input-div">
                         <label class="input-label" for="name_in_game">Game Username</label>
                         {{form.name_in_game}}
-                        <!-- <input type="text" name="register-gameusername" id="name_in_game" placeholder="Game Id Name" required> -->
+                        <!-- <input type="text" name="register-gameusername" id="name_in_game" placeholder="Game Id Name"> -->
                     </div>
                     <div class="game-id-div input-div">
                         <label class="input-label" for="game_id">Game Id</label>
                         {{form.game_id}}
-                        <!-- <input type="number" name="register-gameid" id="game_id" placeholder="Game Id Number" required> -->
+                        <!-- <input type="number" name="register-gameid" id="game_id" placeholder="Game Id Number"> -->
                     </div>
                     <div class="double-input-div">
                         <div class="age-div input-div">
                             <label class="input-label" for="age">Age</label>
                             {{form.age}}
-                            <!-- <input type="number" name="register-age" id="age" placeholder="Your Age in Years" required> -->
+                            <!-- <input type="number" name="register-age" id="age" placeholder="Your Age in Years"> -->
                         </div>
                         <div class="gender-div input-div">
                             <label class="input-label" for="gender">Gender</label>
@@ -95,11 +95,11 @@
                     <div class="facebook-id-div input-div">
                         <label class="input-label" for="facebook_name">Facebook Id Name</label>
                         {{form.facebook_name}}
-                        <!-- <input type="text" name="register-facebook" id="facebook_name" placeholder="Facebook Id Name" required> -->
+                        <!-- <input type="text" name="register-facebook" id="facebook_name" placeholder="Facebook Id Name" > -->
                     </div>
 
                     <div class="submit-btn">
-                        <input type="submit" name="submit" value="Submit">
+                        <input type="submit" class="register-submit-btn" name="submit" value="Submit">
                     </div>
 
                 </form>
@@ -125,9 +125,6 @@
                     imageRestrictDiv.style.display = 'none';
                 }
             }
-        }, false);
-
-        function showPreview(event) {
             if (event.target.files.length > 0) {
                 var src = URL.createObjectURL(event.target.files[0]);
                 var preview = document.getElementById('user-image-preview');
@@ -137,6 +134,9 @@
                 preview.style.display = "block";
                 imageContent.style.display = 'none';
             }
-        }
+        }, false);
+
+
+        
     </script>
 {% endblock page_details %}

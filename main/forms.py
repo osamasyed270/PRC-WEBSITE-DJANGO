@@ -5,10 +5,10 @@ from .models import Match_1_Register
 class RegistrationForm(ModelForm):
     class Meta:
         model = Match_1_Register
-        fields = ('image', 'full_name', 'email', 'mobile_no', 'name_in_game', 'game_id', 'age', 'gender', 'facebook_name')
+        fields = ['image', 'full_name', 'email', 'mobile_no', 'name_in_game', 'game_id', 'age', 'gender', 'facebook_name']
 
         widgets = {
-			'image': forms.FileInput(attrs={'class': 'default-btn', 'hidden': 'True', 'onchange': 'showPreview(event)'}),
+			'image': forms.FileInput(attrs={'class': 'default-btn', 'hidden': 'True', 'required': 'True'}),
 			'full_name': forms.TextInput(attrs={'id': 'full_name', 'placeholder': 'Full Name'}),
 			'email': forms.EmailInput(attrs={'id': 'email', 'placeholder': 'example@gmail.com'}),
 			'mobile_no': forms.NumberInput(attrs={'id': 'mobile_no', 'placeholder': 'Mobile Number'}),

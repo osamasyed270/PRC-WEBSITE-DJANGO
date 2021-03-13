@@ -35,6 +35,7 @@
 
 .main-container .register-main-container .register-container .register-top-container .match-date {
   font-size: 2rem;
+  color: #FFC605;
 }
 
 .main-container .register-main-container .register-container .register-content-container {
@@ -236,5 +237,82 @@
   color: #F32013;
   text-align: center;
   font-size: 1.4rem;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 62.5%;
+  }
+  .main-container .register-main-container .register-container .register-top-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-container .register-main-container .register-container .register-top-container .register-title {
+    margin-bottom: .5rem;
+  }
+  .main-container .register-main-container .register-container .register-content-container .register-form .form-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container {
+    width: 20rem;
+    margin: 0;
+  }
+  .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div {
+    width: 20rem;
+    height: 20rem;
+  }
+  .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .content {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 2rem;
+  }
+  .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .content .user-icon {
+    width: 10rem;
+  }
+  .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .upload-btn-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: transparent;
+  }
+  .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .upload-btn-div .upload-img-btn {
+    width: 100%;
+    border-radius: 0rem;
+    text-align: center;
+    background: #FFC605;
+    color: #000;
+  }
+  .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div:hover > .upload-btn-div {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .main-container .register-main-container .register-container .register-content-container .register-form .form-top .form-top-inputs-div .input-div {
+    margin-top: 2.5rem;
+  }
+  .main-container .register-main-container .register-container .register-content-container .register-form .form-top .form-top-inputs-div .input-div:nth-child(2) {
+    margin-top: 2.5rem;
+  }
 }
 /*# sourceMappingURL=register-now.css.map */

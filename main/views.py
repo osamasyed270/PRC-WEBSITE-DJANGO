@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from main.models import Match_1_Register
 from django.core.files.storage import FileSystemStorage
 from .forms import RegistrationForm
+from django.contrib import messages
 
 # Create your views here.
 def home(request):
@@ -26,9 +27,10 @@ def registerNow(request):
 
     if request.method == 'POST':
         form = RegistrationForm(request.POST, request.FILES)
+
         if form.is_valid():
             form.save()
-            
+    
     context = {'form': form}
     return render(request, 'main/register-now.html', context)
 

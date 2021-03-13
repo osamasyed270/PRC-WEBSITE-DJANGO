@@ -139,13 +139,12 @@ input[type=number] {
 
 .alert {
     position: absolute;
-    width: 90%;
-    top: 2rem;
+    width: 100%;
+    top: 6.5rem;
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.6rem;
-    border-radius: .5rem;
-    display: none;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.6rem;
