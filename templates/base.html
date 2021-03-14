@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     {% block title_tag %}{% endblock title_tag %}
+
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- FONTAWESOME JAVASCRIPT FILE -->
+    <script src="https://kit.fontawesome.com/9f23711fbd.js" crossorigin="anonymous"></script>
     
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -32,12 +37,56 @@
                     <li><a href="how-to-register" class="{% block how_to_register_active %} {% endblock how_to_register_active %}">How to Register</a></li>
                     <li><a href="game-rules" class="{% block game_rules_active %} {% endblock game_rules_active %}">Game Rules</a></li>
                     <li><a href="contact-us" class="{% block contact_us_active %} {% endblock contact_us_active %}">Contact Us</a></li>
+                    <li><a href="" class="">Winners</a></li>
                 </ul>
             </div>
             <div class="header-right">
                 <a class="register-btn" href="register-now">Register Now</a>
             </div>
+            <div class="menu-toggle-btn">
+                <i class="fas fa-bars show-open-btn"></i>
+                <i class="fas fa-times"></i>
+            </div>
         </header>
+        <div class="side-bar-menu">
+            <ul>
+                <li><a href="/" class="">Home</a></li>
+                <li><a href="register-now" class="">Register Now</a></li>
+                <li><a href="how-to-register" class="">How to Register</a></li>
+                <li><a href="game-rules" class="">Game Rules</a></li>
+                <li><a href="contact-us" class="">Contact Us</a></li>
+                <li><a href="" class="">Winners</a></li>
+            </ul>
+            <div class="follow-us">
+                <div class="follow-us-title">Follow Us</div>
+                <ul class="social-media">
+                    <li>
+                        <a href="#" class="first-item">
+                            <span class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                            <span class="text">Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-youtube-play" aria-hidden="true"></i></span>
+                            <span class="text">Youtube</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa fa-instagram" aria-hidden="true"></i></span>
+                            <span class="text">Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fab fa-discord"></i></span>
+                            <span class="text">Discord</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
         
         {% block page_details %}
         {% endblock page_details %}
@@ -49,6 +98,23 @@
         function closeAlert() {
             alert.remove();
         }
+
+        var menuToggleBtn = document.querySelector('.menu-toggle-btn');
+        var menuOpenBtn = menuToggleBtn.querySelector('.fa-bars');
+        var menuCloseBtn = menuToggleBtn.querySelector('.fa-times');
+        var sideBarMenu = document.querySelector('.side-bar-menu');
+
+        menuToggleBtn.addEventListener('click', function() {
+            if (menuOpenBtn.classList[2] == "show-open-btn") {
+                menuOpenBtn.classList.remove('show-open-btn');
+                menuCloseBtn.classList.add('show-close-btn');
+            } else if (menuCloseBtn.classList[2] == "show-close-btn") {
+                menuCloseBtn.classList.remove('show-close-btn');
+                menuOpenBtn.classList.add('show-open-btn');
+            }
+
+            sideBarMenu.classList.toggle('show-side-bar-menu');
+        });
     </script>
 
 </body>

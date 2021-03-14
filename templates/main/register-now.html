@@ -40,8 +40,7 @@
                                 <div class="upload-btn-div">
                                     <p class="upload-img-btn" onclick="clicked()">Upload Image</p>
                                     <div class="after-upload-img">
-                                        <p class="change-img-btn">Change</p>
-                                        <p class="remove-img-btn">Remove</p>
+                                        <p class="change-img-btn btn" onclick="clicked()">Change Image</p>
                                     </div>
                                 </div>
                             </div>
@@ -116,6 +115,7 @@
 
         var defaultBtn = document.querySelector('.default-btn');
         var imageRestrictDiv = document.querySelector('.image-restrict-div');
+        var preview = document.getElementById('user-image-preview');
         defaultBtn.addEventListener("change", function(event) {
             var files = defaultBtn.files;
             for (var i = 0; i < files.length; i++) {
@@ -125,16 +125,26 @@
                     imageRestrictDiv.style.display = 'none';
                 }
             }
+            var uploadBtnDiv = document.querySelector('.upload-btn-div');
+            var uploadImgBtn = document.querySelector('.upload-img-btn');
+            var afterUploadImgDiv = document.querySelector('.after-upload-img');
+            var imageContent = document.querySelector('.form-top .image-container .image-div .content');
+
             if (event.target.files.length > 0) {
                 var src = URL.createObjectURL(event.target.files[0]);
-                var preview = document.getElementById('user-image-preview');
-                var imageContent = document.querySelector('.form-top .image-container .image-div .content');
 
                 preview.src = src;
                 preview.style.display = "block";
                 imageContent.style.display = 'none';
+                uploadImgBtn.style.display = 'none';
+                afterUploadImgDiv.style.display = 'flex';
+                uploadBtnDiv.style.alignItems = 'flex-end';
+
             }
+
+            
         }, false);
+        
 
 
         

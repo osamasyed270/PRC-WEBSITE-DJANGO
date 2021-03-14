@@ -1,6 +1,7 @@
 .main-container .section {
   width: 100%;
   position: relative;
+  z-index: 100;
 }
 
 .main-container .section1 {

@@ -176,7 +176,37 @@
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .upload-btn-div .after-upload-img {
+  background: #8f8f8f;
+  width: 100%;
+  font-size: 1.4rem;
   display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .upload-btn-div .after-upload-img .btn {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .5rem 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #000;
+}
+
+.main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .upload-btn-div .after-upload-img .change-img-btn {
+  border: .1rem solid #FFC605;
+  background: #FFC605;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div:hover > .upload-btn-div {
@@ -225,15 +255,18 @@
 
 .main-container .register-main-container .register-container .register-content-container .register-form .submit-btn input {
   width: 10rem;
+  font-size: 1.33rem;
   cursor: pointer;
   -webkit-transition: background-color .3s, border .3s, color .3s;
   transition: background-color .3s, border .3s, color .3s;
+  border-color: #ffc505;
+  background: #ffc505;
+  color: #000;
 }
 
 .main-container .register-main-container .register-container .register-content-container .register-form .submit-btn input:hover {
-  border-color: #fff;
-  background: #fff;
-  color: #000;
+  border-color: #d4a508;
+  background: #d4a508;
 }
 
 .image-restrict-div {
@@ -312,8 +345,11 @@
     padding: 1rem;
     border-radius: 0rem;
     text-align: center;
-    background: #FFC605;
+    background: #ffc505;
     color: #000;
+  }
+  .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div .upload-btn-div .after-upload-img .btn {
+    padding: 1rem;
   }
   .main-container .register-main-container .register-container .register-content-container .register-form .form-top .image-container .image-div:hover > .upload-btn-div {
     -webkit-box-align: end;

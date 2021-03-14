@@ -146,16 +146,37 @@
                                         border-radius: .5rem;
                                         cursor: pointer;
                                         user-select: none;
+                                        // display: none;
                                     }
     
                                     .after-upload-img {
+                                        background: rgb(143, 143, 143);
+                                        width: 100%;
+                                        font-size: 1.4rem;
                                         display: none;
+                                        align-items: center;
+
+                                        .btn {
+                                            flex-grow: 2;
+                                            display: flex;
+                                            justify-content: center;
+                                            padding: .5rem 0;
+                                            cursor: pointer;
+                                            user-select: none;
+                                            color: #000;
+                                        }
+
+                                        .change-img-btn {
+                                            border: .1rem solid #FFC605;
+                                            background: #FFC605;
+                                        }
                                     }
                                 }
     
                                 &:hover > .upload-btn-div {
                                     display: flex;
                                     align-items: center;
+                                    // align-items: flex-end;
                                     justify-content: center;
                                 }
                             }
@@ -186,13 +207,16 @@
     
                         input {
                             width: 10rem;
+                            font-size: 1.33rem;
                             cursor: pointer;
                             transition: background-color .3s, border .3s, color .3s;
+                            border-color: #ffc505;
+                            background: #ffc505;
+                            color: #000;
     
                             &:hover {
-                                border-color: #fff;
-                                background: #fff;
-                                color: #000;
+                                border-color: #d4a508;
+                                background: #d4a508;
                             }
                         }
                     }
@@ -266,8 +290,14 @@
                                             padding: 1rem;
                                             border-radius: 0rem;
                                             text-align: center;
-                                            background: #FFC605;
+                                            background: #ffc505;
                                             color: #000;
+                                        }
+
+                                        .after-upload-img {
+                                            .btn {
+                                                padding: 1rem;
+                                            }
                                         }
                                     }
 
