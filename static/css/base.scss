@@ -197,6 +197,7 @@ input[type=number] {
 
         .follow-us {
             width: 100%;
+            margin-bottom: 5.5rem;
 
             .follow-us-title {
                 font-size: 2.3rem;
@@ -218,6 +219,7 @@ input[type=number] {
                             width: 1.9rem;
                             text-align: center;
                             margin-right: 1.5rem;
+                            font-size: 1.8rem;
                         }
 
                     }
@@ -324,6 +326,7 @@ input[type=number] {
 @media (max-width: 900px) {
     .main-container {
         .header {
+            padding: 0 1rem;
             background: #000000;
 
             .header-mid {

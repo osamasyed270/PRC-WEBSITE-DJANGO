@@ -224,6 +224,7 @@ input[type=number] {
 
 .main-container .side-bar-menu .follow-us {
   width: 100%;
+  margin-bottom: 5.5rem;
 }
 
 .main-container .side-bar-menu .follow-us .follow-us-title {
@@ -245,6 +246,7 @@ input[type=number] {
   width: 1.9rem;
   text-align: center;
   margin-right: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .main-container .side-bar-menu .follow-us ul li .first-item {
@@ -342,6 +344,7 @@ input[type=number] {
 
 @media (max-width: 900px) {
   .main-container .header {
+    padding: 0 1rem;
     background: #000000;
   }
   .main-container .header .header-mid {
