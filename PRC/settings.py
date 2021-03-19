@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
     'cloudinary_storage',
+    'django_social_share',
 ]
 
 MIDDLEWARE = [

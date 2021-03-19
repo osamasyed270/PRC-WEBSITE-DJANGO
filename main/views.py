@@ -29,7 +29,9 @@ def registerNow(request):
         form = RegistrationForm(request.POST, request.FILES)
 
         if form.is_valid():
-            form.save()
+            form.save() 
+        
+        messages.success(request, '<b>Thank You!</b> Your submission has been sent.')
     
     context = {'form': form}
     return render(request, 'main/register-now.html', context)

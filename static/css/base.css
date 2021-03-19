@@ -196,6 +196,7 @@ input[type=number] {
   transition: .5s;
   overflow: hidden;
   overflow-y: auto;
+  display: none;
   z-index: 200;
 }
 
@@ -342,7 +343,7 @@ input[type=number] {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 836px) {
   .main-container .header {
     padding: 0 1rem;
     background: #000000;
@@ -354,6 +355,9 @@ input[type=number] {
     display: none;
   }
   .main-container .header .menu-toggle-btn {
+    display: block;
+  }
+  .main-container .side-bar-menu {
     display: block;
   }
 }
