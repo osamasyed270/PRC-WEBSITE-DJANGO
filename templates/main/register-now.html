@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 
-{% load social_share %}
-
 {% block title_tag %}<title>Register Now</title>{% endblock title_tag %}
 
 {% block link_tags %}
@@ -102,7 +100,6 @@
 
                     <div class="submit-btn">
                         {% comment %} {{ request.build_absolute_uri }} {% endcomment %}
-                        {% comment %} {% post_to_facebook object_or_url "Post to Facebook!" %} {% endcomment %}
                         <div class="addthis_inline_share_toolbox"></div>
                         <input type="submit" class="register-submit-btn" name="submit" value="Submit">
                     </div>
