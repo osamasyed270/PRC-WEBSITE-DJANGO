@@ -33,7 +33,7 @@
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  bottom: 100px;
+  bottom: 10rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);

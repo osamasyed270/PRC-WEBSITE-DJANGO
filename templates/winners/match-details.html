@@ -1,0 +1,14 @@
+{% if category_posts %}
+    <h1>{{ cats }}</h1>
+    <ul>
+        {% for post in category_posts %}
+            <li>
+            <span><img class="winner-img" src="{{ post.image_url }}" alt=""></span>
+            <span>{{ post.full_name }}</span> - 
+            <span>{{ post.gender }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Sorry this page does not exist...</p>
+{% endif %}

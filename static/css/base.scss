@@ -21,6 +21,7 @@ a {
 
 ::-webkit-scrollbar {
     width: .7rem;
+    height: .7rem;
   }
 
 ::-webkit-scrollbar-track {
@@ -240,7 +241,7 @@ input[type=number] {
 }
 
 .alert {
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 6.5rem;
     left: 50%;
@@ -250,6 +251,7 @@ input[type=number] {
     justify-content: space-between;
     align-items: center;
     padding: 1.6rem;
+    z-index: 150;
 
     .alert-message {
         padding-right: 4rem;

@@ -9,7 +9,7 @@ class Match_1_Register(models.Model):
         ("female", "Female"),
     )
     sno = models.AutoField(primary_key=True)
-    image = models.ImageField(null=True, blank=True, upload_to='Match1')
+    image = models.ImageField(upload_to='Match1')
     full_name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
     mobile_no = models.CharField(max_length=11)

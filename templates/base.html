@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     {% block title_tag %}{% endblock title_tag %}
 
     <!-- FONTAWESOME -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- FONTAWESOME JAVASCRIPT FILE -->
     <script src="https://kit.fontawesome.com/9f23711fbd.js" crossorigin="anonymous"></script>
-    
+
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -22,8 +22,17 @@
     {% block link_tags %}
     {% endblock link_tags %}
 
+    <!-- JQUERY JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            <p class="alert-message">{{ message|safe }}</p>
+            <button type="button" class="close-btn"><i class="fas fa-times" onclick="closeAlert()"></i></button>
+        </div>
+    {% endfor %}
     <div class="main-container">
         <header class="header">
             <div class="header-left">
@@ -34,14 +43,14 @@
             <div class="header-mid">
                 <ul>
                     <li><a href="/" class="{% block home_active %} {% endblock home_active %}">Home</a></li>
-                    <li><a href="how-to-register" class="{% block how_to_register_active %} {% endblock how_to_register_active %}">How to Register</a></li>
-                    <li><a href="game-rules" class="{% block game_rules_active %} {% endblock game_rules_active %}">Game Rules</a></li>
-                    <li><a href="contact-us" class="{% block contact_us_active %} {% endblock contact_us_active %}">Contact Us</a></li>
-                    <li><a href="" class="">Winners</a></li>
+                    <li><a href="/how-to-register" class="{% block how_to_register_active %} {% endblock how_to_register_active %}">How to Register</a></li>
+                    <li><a href="/game-rules" class="{% block game_rules_active %} {% endblock game_rules_active %}">Game Rules</a></li>
+                    <li><a href="/winners" class="{% block winners_active %} {% endblock winners_active %}">Winners</a></li>
+                    <li><a href="/contact-us" class="{% block contact_us_active %} {% endblock contact_us_active %}">Contact Us</a></li>
                 </ul>
             </div>
             <div class="header-right">
-                <a class="register-btn" href="register-now">Register Now</a>
+                <a class="register-btn" href="/register-now">Register Now</a>
             </div>
             <div class="menu-toggle-btn">
                 <i class="fas fa-bars show-open-btn"></i>
@@ -51,11 +60,11 @@
         <div class="side-bar-menu">
             <ul>
                 <li><a href="/" class="">Home</a></li>
-                <li><a href="register-now" class="">Register Now</a></li>
-                <li><a href="how-to-register" class="">How to Register</a></li>
-                <li><a href="game-rules" class="">Game Rules</a></li>
-                <li><a href="contact-us" class="">Contact Us</a></li>
-                <li><a href="" class="">Winners</a></li>
+                <li><a href="/register-now" class="">Register Now</a></li>
+                <li><a href="/how-to-register" class="">How to Register</a></li>
+                <li><a href="/game-rules" class="">Game Rules</a></li>
+                <li><a href="/winners" class="">Winners</a></li>
+                <li><a href="/contact-us" class="">Contact Us</a></li>
             </ul>
             <div class="follow-us">
                 <div class="follow-us-title">Follow Us</div>
@@ -87,11 +96,13 @@
                 </ul>
             </div>
         </div>
-        
+
         {% block page_details %}
         {% endblock page_details %}
-        
+
     </div>
+
+    
 
     <script>
         var alert = document.querySelector('.alert');
@@ -117,5 +128,6 @@
         });
     </script>
 
+    
 </body>
 </html>

@@ -4,18 +4,10 @@
 
 {% block link_tags %}
     <link rel="stylesheet" href="/static/css/register-now-css/register-now.css">
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6054c23257753ff3"></script>
 {% endblock link_tags %}
 
 {% block page_details %}
     <div class="register-main-container">
-        {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}">
-                <p class="alert-message">{{ message|safe }}</p>
-                <button type="button" class="close-btn"><i class="fas fa-times" onclick="closeAlert()"></i></button>
-            </div>
-        {% endfor %}
-
         <div class="register-container">
             <div class="register-top-container">
                 <div class="register-title">
@@ -100,7 +92,6 @@
 
                     <div class="submit-btn">
                         {% comment %} {{ request.build_absolute_uri }} {% endcomment %}
-                        <div class="addthis_inline_share_toolbox"></div>
                         <input type="submit" class="register-submit-btn" name="submit" value="Submit">
                     </div>
 
@@ -108,6 +99,7 @@
             </div>
         </div>
     </div>
+
 
     <script>
         var defaultBtn = document.querySelector('.default-btn');
