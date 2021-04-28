@@ -5,48 +5,46 @@
 {% block winners_active %} active {% endblock winners_active %}
 
 {% block link_tags %}
-    <link rel="stylesheet" href="/static/css/winners-home-css/winners-home.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" href="/static/css/winners-home-css/winners-home.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 {% endblock link_tags %}
 
 {% block page_details %}
-    <div class="winners-main-container">
-        {% for category in category_list %}
-            <div class="winners-section">
-                <div class="winners-section-top">
-                    <div class="winners-section-title">
-                        <h2>{{ category|title }}</h2>
-                    </div>
-                    <div class="winners-details-btn">
-                        <a href="">Full details</a>
-                    </div>
-                </div>
-                <div class="winners-section-bottom">
-                    <i class="fas fa-chevron-left prev"></i>
-                    <i class="fas fa-chevron-right next"></i>
-                    <div class="post-slider">
-                    {% for winner in category.winners_set.all %}
-                        <div class="post">
-                            <a href="">
-                                <div class="img-not-available">
-                                    <img class="user-icon" src="/static/img/user-icon.svg" alt="">
-                                </div>
-                                <img class="winner-img" src="{{ winner.image_url }}" alt="">
-                                <div class="post-content">
-                                    <h2 class="winner-name">{{ winner.full_name }}</h2>
-                                </div>
-                            </a>
-                        </div>
-                    {% endfor %}
-                    </div>
-                </div>
+<div class="winners-main-container">
+    <div class="winners-section">
+        <div class="winners-section-top">
+            <div class="winners-section-title">
+                <h2>Match 1</h2>
             </div>
-        {% endfor %}
+            <div class="winners-details-btn">
+                <a href="">Match Result</a>
+            </div>
+        </div>
+        <div class="winners-section-bottom">
+            <i class="fas fa-chevron-left prev"></i>
+            <i class="fas fa-chevron-right next"></i>
+            <div class="post-slider">
+                {% for winner in match1 %}
+                <div class="post">
+                    <a href="">
+                        <div class="img-not-available">
+                            <img class="user-icon" src="/static/img/user-icon.svg" alt="">
+                        </div>
+                        <img class="winner-img" src="{{ winner.image_url }}" alt="">
+                        <div class="post-content">
+                            <h2 class="winner-name">{{ winner.full_name }}</h2>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
-{% comment %}     
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <script src="/static/js/slick.js" type="text/javascript" charset="utf-8"></script> {% endcomment %}
-    <script src="/static/js/slick-carousel.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    
+</div>
+{% comment %}
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="/static/js/slick.js" type="text/javascript" charset="utf-8"></script> {% endcomment %}
+<script src="/static/js/slick-carousel.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 {% endblock %}

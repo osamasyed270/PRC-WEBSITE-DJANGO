@@ -1,12 +1,20 @@
 from django.shortcuts import render, HttpResponse
 from django.db import models
-from winners.models import Winner, Category
+from winners.models import Winner, Category, Match_1_Winner
 
 # Create your views here.
 def winners_home(request):
-    category_list = Category.objects.all()
     allwinners = Winner.objects.all()
-    context = {'allwinners': allwinners, 'category_list':category_list}
+
+    match1 = Match_1_Winner.objects.all().order_by('timestamp')[:5]
+    match1detail = Match_1_Winner.objects.all()
+
+    context = {
+        'allwinners': allwinners,
+        'match1': match1,
+        'match1detail': match1detail
+    }
+
     return render(request, 'winners/winners-home.html', context)
 
 def match_details(request, cats):
